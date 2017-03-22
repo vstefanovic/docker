@@ -1,5 +1,4 @@
-// +build !mips
-// +build !mipsle
+// +build mips mipsle
 
 package signal
 
@@ -33,7 +32,6 @@ var SignalMap = map[string]syscall.Signal{
 	"PWR":      syscall.SIGPWR,
 	"QUIT":     syscall.SIGQUIT,
 	"SEGV":     syscall.SIGSEGV,
-	"STKFLT":   syscall.SIGSTKFLT,
 	"STOP":     syscall.SIGSTOP,
 	"SYS":      syscall.SIGSYS,
 	"TERM":     syscall.SIGTERM,
@@ -41,7 +39,6 @@ var SignalMap = map[string]syscall.Signal{
 	"TSTP":     syscall.SIGTSTP,
 	"TTIN":     syscall.SIGTTIN,
 	"TTOU":     syscall.SIGTTOU,
-	"UNUSED":   syscall.SIGUNUSED,
 	"URG":      syscall.SIGURG,
 	"USR1":     syscall.SIGUSR1,
 	"USR2":     syscall.SIGUSR2,

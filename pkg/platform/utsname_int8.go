@@ -1,4 +1,4 @@
-// +build linux,386 linux,amd64 linux,arm64
+// +build linux,386 linux,amd64 linux,arm64 linux,mips linux,mipsle
 // see golang's sources src/syscall/ztypes_linux_*.go that use int8
 
 package platform

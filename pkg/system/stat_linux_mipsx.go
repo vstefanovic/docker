@@ -1,5 +1,4 @@
-// +build !mips
-// +build !mipsle
+// +build mips mipsle
 
 package system
 

@@ -1,6 +1,5 @@
 // +build linux
-// +build !mips
-// +build !mipsle
+// +build mips mipsle
 
 package loopback
 
@@ -55,7 +54,7 @@ func FindLoopDeviceFor(file *os.File) *os.File {
 		}
 
 		dev, inode, err := getLoopbackBackingFile(file)
-		if err == nil && dev == targetDevice && inode == targetInode {
+		if err == nil && dev == uint64(targetDevice) && inode == targetInode {
 			return file
 		}
 		file.Close()

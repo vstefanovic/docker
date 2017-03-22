@@ -39,7 +39,7 @@ case "${DOCKER_ENGINE_GOARCH:-$DOCKER_CLIENT_GOARCH}" in
 	arm64)
 		PACKAGE_ARCH='aarch64'
 		;;
-	amd64|ppc64le|s390x)
+	amd64|ppc64le|s390x|mips|mipsle)
 		PACKAGE_ARCH="${DOCKER_ENGINE_GOARCH:-$DOCKER_CLIENT_GOARCH}"
 		;;
 	*)
